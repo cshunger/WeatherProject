@@ -17,7 +17,11 @@ MFP CLI: `npm install -g mfpdev-cli`
 
 Webpack: `npm install -g webpack`
 
-Before you begin start your MobileFirst Platform Foundation 8.0 server.
+## Before you begin 
+
+Start your MobileFirst Platform Foundation 8.0 server
+
+From your Weather Services API gather the host and password for your adapter. Place those values inside the `weatehrAPIUsername` and `weatherAPIPassword` variables in `JavaHttpResource.java` located `JavaHTTP/src/main/java/com/sample`
 
 ## Starting the App
 
