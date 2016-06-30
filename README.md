@@ -12,7 +12,9 @@ An instance of Weather Services from Bluemix with the password and host, read ge
 https://console.ng.bluemix.net/docs/services/Weather/index.html
 
 Cordova: `npm install -g cordova`
+
 MFP CLI: `npm install -g mfpdev-cli`
+
 Webpack: `npm install -g webpack`
 
 Before you begin start your MobileFirst Platform Foundation 8.0 server.
