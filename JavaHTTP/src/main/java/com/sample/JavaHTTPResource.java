@@ -110,7 +110,7 @@ public class JavaHTTPResource {
 	@GET
 	@Produces("application/json")
 	@Path("/{latitude}/{longitude}")
-	public String getWeather(@Context HttpServletResponse response, @PathParam("latitude") float latitude, @PathParam("longitude") float longitude)
+	public void getWeather(@Context HttpServletResponse response, @PathParam("latitude") float latitude, @PathParam("longitude") float longitude)
 			throws IOException, IllegalStateException, SAXException {
 		HttpGet request = new HttpGet("/api/weather/v2/observations/current?units=e&geocode="+latitude + ","+ longitude+"&language=en-US");
 		String authValue = new String(Base64.encodeBase64((weatherAPIUsername + ":" + weatherAPIPassword).getBytes()));
