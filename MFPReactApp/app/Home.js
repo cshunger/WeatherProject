@@ -6,6 +6,8 @@ import WeatherDisplay from './components/WeatherDisplay'
 class Home extends React.Component{
    constructor(props){
       super(props);
+      this.handleWeather = this.handleWeather.bind(this);
+      this.showBusyIndicator = this.showBusyIndicator.bind(this);
       this.state = {
          busy: false,
          cityTemp: '',
@@ -47,12 +49,7 @@ class Home extends React.Component{
       }
    }
 
-   wlCommonInit(){
-      WL.Logger.config({"level":"debug"});
-   }
-
    componentDidMount(){
-      this.wlCommonInit();
    }
 
    handleWeather(_weatherData){
@@ -106,8 +103,8 @@ class Home extends React.Component{
             <CityList
                cities={this.state.cities}
                selected={this.state.selected}
-               updateWeather={(_weatherData) => this.handleWeather(_weatherData)}
-               showBusyIndicator = {(status, index) => this.showBusyIndicator(status, index)}/>
+               updateWeather={this.handleWeather}
+               showBusyIndicator = {this.showBusyIndicator}/>
             {weatherData}
          </div>
       )
