@@ -19,9 +19,7 @@ MobileFirst Platform Foundation DevKit, read getting started for MobileFirst Pla
 
 https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/setting-up-your-development-environment/mobilefirst-development-environment/
 
-An instance of Weather Services from Bluemix with the password and host, read getting started for weather services:
-
-https://console.ng.bluemix.net/docs/services/Weather/index.html
+An instance of Weather Services from Bluemix with the password and host, read getting started for weather services, [here](https://console.ng.bluemix.net/docs/services/Weather/index.html).
 
 Cordova: `npm install -g cordova`
 
@@ -31,7 +29,7 @@ Webpack: `npm install -g webpack`
 
 ## Before you begin 
 
-Start your MobileFirst Platform Foundation 8.0 server
+Start your MobileFirst Platform Foundation 8.0 server. Navigate to the root directory of your MobileFirst Server and execute the `run` script.
 
 From your Weather Services API gather the host and password for your adapter. Place those values inside the `weatehrAPIUsername` and `weatherAPIPassword` variables in `JavaHttpResource.java` located `JavaHTTP/src/main/java/com/sample`
 
@@ -70,3 +68,5 @@ Then, Deploy the adapter:
 1. MobileFirst needs to call `wlCommonInit` at the beginning of the application start. To achieve this I created a `wlinit.js` file in my common `www/js` directory and injected the script in my `index.html` with the `<script>` tag. I was not able to include this in my JSX because the babel complining did not externalize this function for MFP to call. 
 
 2. I am working of babel `stage-0` but I am using JavaScript that is highly likely to make it into ES7. I used `stage-0` because the ease of binding functions to `this` with the fat arrow syntax (`=>`). 
+
+3. These inscructions are for unix machines, they may differ on a windows machine.
