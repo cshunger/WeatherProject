@@ -6,8 +6,8 @@ import WeatherDisplay from './components/WeatherDisplay'
 class Home extends React.Component{
    constructor(props){
       super(props);
-      this.handleWeather = this.handleWeather.bind(this);
-      this.showBusyIndicator = this.showBusyIndicator.bind(this);
+      // this.handleWeather = this.handleWeather.bind(this);
+      // this.showBusyIndicator = this.showBusyIndicator.bind(this);
       this.state = {
          busy: false,
          cityTemp: '',
@@ -49,10 +49,7 @@ class Home extends React.Component{
       }
    }
 
-   componentDidMount(){
-   }
-
-   handleWeather(_weatherData){
+   handleWeather = (_weatherData) => {
       var d = new Date(Date.now());
       var dateString =  this.getMonthDate(d) + ", " + d.getFullYear();
       var timeOfDay = _weatherData.responseJSON.observation.day_ind;
@@ -67,7 +64,7 @@ class Home extends React.Component{
       });
    }
 
-   showBusyIndicator(status, index){
+   showBusyIndicator = (status, index) =>{
       this.setState({
          selected: index,
          busy: status
