@@ -25,7 +25,6 @@ class Main extends React.Component{
 
    onResponseFailure = (response) =>{
        var resultText = "Failed to call the resource:" + response.errorMsg;
-       alert(resultText)
    }
 
    render() {
