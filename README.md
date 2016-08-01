@@ -3,7 +3,11 @@ A MobileFirst Platform Foundation 8.0 project using ReactJS and Weather Services
 
 ## Overview
 
-This is a sample project that was created to show off how versitile MobileFirst Platform Foundation 8.0 is with UI Frameworks. In this example I demonstrate the ease of using Facebook's ReactJS with MobileFirst Platform Foundation 8.0.
+This is a sample project that was created to show off how versatile MobileFirst Platform Foundation 8.0 is with UI Frameworks. In this example I demonstrate the ease of using Facebook's ReactJS with MobileFirst Platform Foundation 8.0.
+
+This app is going to display weather data for four areas; Austin, Ann Arbor, New York, and San Francisco. As you press the buttons at the top of the screen the weather will update to the most recent weather report and include a picture of the current weather.
+
+![Weather App](./WeatherApp.png) 
 
 ## What you should know
 
@@ -31,7 +35,7 @@ Webpack: `npm install -g webpack`
 
 Start your MobileFirst Platform Foundation 8.0 server. Navigate to the root directory of your MobileFirst Server and execute the `run` script.
 
-From your Weather Services API gather the host and password for your adapter. Place those values inside the `weatehrAPIUsername` and `weatherAPIPassword` variables in `JavaHttpResource.java` located `JavaHTTP/src/main/java/com/sample`
+From your Weather Services API, gather the host and password for your adapter. Place those values inside the `weatehrAPIUsername` and `weatherAPIPassword` variables in `JavaHttpResource.java` located `JavaHTTP/src/main/java/com/sample`
 
 ## Starting the App
 
@@ -67,6 +71,6 @@ Then, Deploy the adapter:
 
 1. MobileFirst needs to call `wlCommonInit` at the beginning of the application start. To achieve this I created a `wlinit.js` file in my common `www/js` directory and injected the script in my `index.html` with the `<script>` tag. I was not able to include this in my JSX because the babel complining did not externalize this function for MFP to call. 
 
-2. I am working of babel `stage-0` but I am using JavaScript that is highly likely to make it into ES7. I used `stage-0` because the ease of binding functions to `this` with the fat arrow syntax (`=>`). 
+2. I am working off babel `stage-0` but I am using JavaScript that is highly likely to make it into ES7 or ES8. I used `stage-0` because the ease of binding functions to `this` with the fat arrow syntax (`=>`). 
 
 3. These inscructions are for unix machines, they may differ on a windows machine.
