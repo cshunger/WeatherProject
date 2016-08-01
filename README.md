@@ -1,5 +1,17 @@
 # WeatherProject
-A MobileFirst Platform Foundation project using ReactJS and Weather Services API from Bluemix
+A MobileFirst Platform Foundation 8.0 project using ReactJS and Weather Services API from Bluemix.
+
+## Overview
+
+This is a sample project that was created to show off how versitile MobileFirst Platform Foundation 8.0 is with UI Frameworks. In this example I demonstrate the ease of using Facebook's ReactJS with MobileFirst Platform Foundation 8.0.
+
+## What you should know
+
+Before starting this project you should have a good understanding of JavaScript using the latest features.
+
+It is important to understand Facebook's ReactJS Framework and how to create classes that render the appropriate objects. You can learn about ReactJS [here](https://facebook.github.io/react/).
+
+Lastly, have and understanding of the MobileFirst Platform Foundation 8.0 JavaScript Framework. You can learn more about building a Cordova Project [here](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/cordova-tutorials/).
 
 ## What you need
 
@@ -52,3 +64,9 @@ First build the adpter:
 Then, Deploy the adapter:
 
 `mfpdev adapter deploy`
+
+## Important Highlights
+
+1. MobileFirst needs to call `wlCommonInit` at the beginning of the application start. To achieve this I created a `wlinit.js` file in my common `www/js` directory and injected the script in my `index.html` with the `<script>` tag. I was not able to include this in my JSX because the babel complining did not externalize this function for MFP to call. 
+
+2. I am working of babel `stage-0` but I am using JavaScript that is highly likely to make it into ES7. I used `stage-0` because the ease of binding functions to `this` with the fat arrow syntax (`=>`). 
